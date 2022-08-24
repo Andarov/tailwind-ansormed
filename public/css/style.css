@@ -3,6 +3,23 @@
 @tailwind utilities;
 
 
-:root {
-    --green: #5ca5a5;
+@layer components {
+    .btn {
+        @apply bg-red py-3 px-6 rounded-lg text-white font-bold uppercase text-sm border-2 border-red;
+    }
+    .btn--hover-white {
+        @apply hover:bg-white hover:text-red transition-colors;
+    }
+    .btn--hover-green {
+        @apply hover:bg-green hover:text-white hover:border-white transition-colors;
+    }
+    .btn--opacity {
+        @apply hover:opacity-80 active:opacity-60;
+    }
+    .navlink {
+        @apply text-black font-bold text-sm hover:text-red transition-colors active:opacity-60;
+    }
+    .navlink--footer {
+        @apply text-white font-bold text-sm hover:text-red transition-colors active:opacity-60;
+    }
 }
